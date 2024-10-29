@@ -1,0 +1,45 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(8,100px);
+    gap: 10px;
+    padding: 10px;
+
+}
+
+.grid-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-checkbox-container {
+    position: relative;
+    width: 100px; /* Ширина контейнера изображений, совпадающая с шириной изображений */
+    height: 100px; /* Высота контейнера изображений, совпадающая с высотой изображений */
+}
+.checkbox {
+    position: relative;
+    right: 5px;
+    top: 21px;
+}
+
+.image-checkbox-container .v-checkbox {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+[slot="drawer"] {
+    background-color: var(--lumo-shade-5pct);
+}
+[slot="drawer"] nav a {
+    text-decoration: none;
+    transition: color 140ms;
+}
+[slot="drawer"] nav a:hover {
+    color: var(--lumo-primary-text-color);
+}
+[slot="drawer"] nav a[highlight] {
+    color: var(--lumo-primary-text-color);
+}
